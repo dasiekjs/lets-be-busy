@@ -1,0 +1,10 @@
+{
+  "name": "lets-be-busy-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/lets-be-busy-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["lets-be-busy"],
+  "// targets": "to see all targets run: nx show project lets-be-busy-e2e --web",
+  "targets": {}
+}
