@@ -70,5 +70,6 @@
       "style": "scss",
       "unitTestRunner": "jest"
     }
-  }
+  },
+  "nxCloudAccessToken": "YTM5MTg4MTUtNGZkYy00ODNlLTg1MGUtMGQ4NzU1MWRlMzQ1fHJlYWQtd3JpdGU="
 }
