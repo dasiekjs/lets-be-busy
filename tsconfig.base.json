@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lets-be-busy/login": ["libs/login/src/index.ts"],
       "@lets-be-busy/projects-manager": ["libs/projects-manager/src/index.ts"],
       "@lets-be-busy/shared-ui": ["libs/shared/ui/src/index.ts"]
     }

@@ -1,0 +1,30 @@
+<div class="card">
+  <!-- TODO modify condition to accept "title" input or "uiCardTitle" directive -->
+  @if (title() || subtitle() || cardHeader() || cardActions()) {
+    <div class="card__header">
+      <div class="card__header__title">
+        @if (cardHeader()) {
+          <ng-container [ngTemplateOutlet]="(cardHeader()?.templateRef || null)" />
+        } @else {
+          @if (title()) {
+            <h2 class="card__header__title__title-element">{{ title() }}</h2>
+          }
+          @if (subtitle()) {
+            <small class="card__header__title__subtitle-element">{{ subtitle() }}</small>
+          }
+        }
+      </div>
+      @if (cardActions()) {
+        <div class="card__header__actions">
+          <ng-container [ngTemplateOutlet]="(cardActions()?.templateRef || null)" />
+        </div>
+      }
+    </div>
+  }
+  <div class="card__body">
+    <ng-content />
+  </div>
+  <!--<div class="card__footer">
+    footer?
+  </div>-->
+</div>

@@ -44,6 +44,11 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
@@ -75,7 +80,7 @@
       "unitTestRunner": "jest"
     },
     "@nx/angular:component": {
-      "style": "css"
+      "style": "scss"
     }
   },
   "nxCloudAccessToken": "YTM5MTg4MTUtNGZkYy00ODNlLTg1MGUtMGQ4NzU1MWRlMzQ1fHJlYWQtd3JpdGU="

@@ -1,0 +1,17 @@
+.app-navbar {
+  @apply
+    bg-white
+    px-5
+    h-14
+    flex flex-row justify-between items-center
+  ;
+
+  & &__logo {
+    @apply
+      text-gray-700
+  }
+  & &__actions {
+    @apply
+      flex flex-row gap-4
+  }
+}

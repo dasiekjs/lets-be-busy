@@ -3,3 +3,27 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  @apply bg-gray-100;
+}
+
+/* Global template classes */
+/** buttons TODO - move to ui-button.scss + add more colors **/
+.btn {
+  @apply
+    flex flex-row gap-1 justify-center items-center px-2 py-1 rounded;
+
+  &--primary:not(&--outline) {
+    @apply bg-primary text-white;
+    // TODO add hover;
+  }
+  &--outline#{&}--primary {
+    @apply border-primary border text-primary;
+    // TODO add hover
+  }
+}
+
+/* Card? */
+
+@import "libs/shared/ui/src/lib/ui-card/components/ui-card.component.scss";

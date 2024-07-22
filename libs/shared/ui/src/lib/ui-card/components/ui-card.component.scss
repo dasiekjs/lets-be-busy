@@ -1,0 +1,27 @@
+.card {
+  @apply bg-white
+    rounded
+  ;
+
+  &__header {
+    @apply flex items-center justify-between gap-1 border-b border-gray-200;
+  }
+
+  &__header__title {
+    @apply flex flex-col gap-1;
+    &__title-element {
+      @apply text-2xl;
+    }
+    &__subtitle-element {
+      @apply text-xs font-medium text-gray-500;
+    }
+  }
+
+  &__header__actions {
+    @apply flex items-center justify-between gap-1;
+  }
+
+  &__body, &__footer, &__header  {
+    @apply px-5 py-2;
+  }
+}
