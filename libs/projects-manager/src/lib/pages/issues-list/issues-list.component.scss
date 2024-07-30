@@ -1,0 +1,11 @@
+.issues-list {
+  &__container {
+    @apply flex flex-row gap-4;
+  }
+  &__list {
+    @apply w-4/12;
+  }
+  &__preview {
+    @apply flex-1;
+  }
+}
