@@ -2,7 +2,7 @@
   "name": "projects-manager",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/projects-manager/src",
-  "prefix": "lib",
+  "prefix": "lbb-pm",
   "projectType": "library",
   "tags": [],
   "targets": {

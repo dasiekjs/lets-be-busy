@@ -4,7 +4,7 @@
   ;
 
   &__header {
-    @apply flex items-center justify-between gap-1 border-b border-gray-200;
+    @apply flex items-center justify-between gap-1 mx-2 py-3 border-b border-gray-200;
   }
 
   &__header__title {
@@ -21,7 +21,7 @@
     @apply flex items-center justify-between gap-1;
   }
 
-  &__body, &__footer, &__header  {
-    @apply px-5 py-2;
+  &__body, &__footer {
+    @apply px-2 py-2;
   }
 }
