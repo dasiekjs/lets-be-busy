@@ -6,7 +6,7 @@
           <i class="fa-solid fa-list-check"></i> List of issues
         </h2>
       </ng-template>
-      <ul class="max-w-md divide-y divide-gray-200">
+      <ul class="divide-y divide-gray-200 ">
         @for (issue of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track issue) {
           <li class="py-2 px-2 hover:bg-gray-200">
             <a [routerLink]="[]" [queryParams]="{issue: 'LBB-'+issue}"
@@ -39,8 +39,13 @@
     </ui-card>
   </div>
   <div class="issues-list__preview">
-    <ui-loader [onLoading]="vm().onLoadingIssue">
-      <lbb-pm-issue [issue]="vm().selectedIssue" />
+    <ui-loader [onLoading]="onLoadingIssue()">
+
+      @if (selectedIssue()) {
+        <lbb-pm-issue [issue]="selectedIssue()!" />
+      } @else {
+        <span class="text-gray-500">Select issue to display preview</span>
+      }
     </ui-loader>
   </div>
 </div>

@@ -1,3 +1,9 @@
+<ui-card>
+  <ui-breadcrumb [breadcrumbs]="breadcrumbs()!"/>
+  <h3 class="issue-card__title">
+    {{issue().title}}
+  </h3>
 <p>
 {{ issue() | json }}
 </p>
+</ui-card>

@@ -8,8 +8,9 @@ import {
 } from '@lets-be-busy/shared-ui';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { IssueComponent } from '../issue/issue.component';
-import { delay, finalize, map, of, switchMap, tap } from 'rxjs';
+import { delay, map, of, switchMap, tap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Issue } from '../../models/issue';
 
 const requestForIssue = (id: string | number) =>
   of(id)
@@ -17,7 +18,18 @@ const requestForIssue = (id: string | number) =>
       delay(1000),
       map((id) => ({
         id,
-        code: `LBB-${id}`,
+        code: `${id}`,
+        parentIssue: {
+          id: '999',
+          code: 'LBB-999',
+          title: `Parent Issue tester`,
+          description: 'Ignored, check anothers'
+        },
+        project: {
+          id: 'LBB',
+          label: 'Let\'s be busy',
+          description: 'Simple project manager'
+        },
         title: `Example issue with id: ${id}`,
         description: `
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -29,7 +41,7 @@ const requestForIssue = (id: string | number) =>
           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
           Maecenas blandit urna non lectus bibendum mattis.
         `
-      }))
+      }) as Issue)
     );
 
 @Component({
@@ -42,8 +54,8 @@ const requestForIssue = (id: string | number) =>
 })
 export class IssuesListComponent {
 
-  private onLoadingIssue = signal<boolean>(false);
-  private selectedIssue = toSignal(
+  onLoadingIssue = signal<boolean>(false);
+  selectedIssue = toSignal<Issue | null>(
     inject(ActivatedRoute).queryParams
       .pipe(
         map(params => params['issue']),
@@ -52,15 +64,10 @@ export class IssuesListComponent {
           requestForIssue(issueId)
             .pipe(tap(() => this.onLoadingIssue.set(false)))
         )
-      )
-  );
-
-  vm = computed(() => {
-    return {
-      onLoadingIssue: this.onLoadingIssue(),
-      selectedIssue: this.selectedIssue()
+      ), {
+      initialValue: null
     }
-  })
+  );
 
 
 }
