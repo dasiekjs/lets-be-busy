@@ -2,6 +2,7 @@ import { Route } from '@angular/router';
 import { ProjectListComponent } from './pages/project-list/project-list.component';
 import { IssuesListComponent } from './pages/issues-list/issues-list.component';
 import { IssueComponent } from './pages/issue/issue.component';
+import { CreateNewProjectComponent } from './pages/create-new-project/create-new-project.component';
 
 export const appRoutes: Route[] = [
   {
@@ -10,7 +11,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'create',
-    component: ProjectListComponent
+    component: CreateNewProjectComponent
   },
   {
     path: ':projectKey',

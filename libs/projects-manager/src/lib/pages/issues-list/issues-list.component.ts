@@ -61,8 +61,11 @@ export class IssuesListComponent {
         map(params => params['issue']),
         tap(() => this.onLoadingIssue.set(true)),
         switchMap(issueId =>
+          issueId ?
           requestForIssue(issueId)
             .pipe(tap(() => this.onLoadingIssue.set(false)))
+          : of(null)
+              .pipe(tap(() => this.onLoadingIssue.set(false)))
         )
       ), {
       initialValue: null

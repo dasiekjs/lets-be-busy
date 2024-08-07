@@ -1,1 +1,13 @@
-// TODO move to this folder styles for button
+.btn {
+  @apply
+  flex flex-row gap-1 justify-center items-center px-2 py-1 rounded;
+
+  &--primary:not(&--outline) {
+    @apply bg-primary text-white;
+    // TODO add hover;
+  }
+  &--outline#{&}--primary {
+    @apply border-primary border text-primary;
+    // TODO add hover
+  }
+}

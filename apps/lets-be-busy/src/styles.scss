@@ -9,21 +9,11 @@ body {
 }
 
 /* Global template classes */
-/** buttons TODO - move to ui-button.scss + add more colors **/
-.btn {
-  @apply
-    flex flex-row gap-1 justify-center items-center px-2 py-1 rounded;
-
-  &--primary:not(&--outline) {
-    @apply bg-primary text-white;
-    // TODO add hover;
-  }
-  &--outline#{&}--primary {
-    @apply border-primary border text-primary;
-    // TODO add hover
-  }
-}
+/** buttons **/
+@import "libs/shared/ui/src/lib/ui-button/ui-button.scss";
 
 /* Card? */
 
 @import "libs/shared/ui/src/lib/ui-card/components/ui-card.component.scss";
+@import "libs/shared/ui/src/lib/ui-input/ui-input.scss";
+@import "libs/shared/ui/src/lib/ui-input-container/ui-input-container.scss";

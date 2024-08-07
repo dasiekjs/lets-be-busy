@@ -1,4 +1,5 @@
 import { Directive, Input } from '@angular/core';
+import { AllowedColors } from '../../types';
 
 @Directive({
   selector: '[uiButton]',
@@ -20,5 +21,5 @@ export class UiButtonDirective {
       this.outlineButton = true;
     }
   }
-  @Input() color?: string = 'primary';
+  @Input() color?: AllowedColors = 'primary';
 }
