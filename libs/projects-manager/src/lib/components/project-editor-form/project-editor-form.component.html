@@ -1,5 +1,21 @@
-<div class="flex flex-col">
-  <div uiInputContainer>
-    <input uiInput />
+<form [formGroup]="form">
+  <div class="flex flex-col">
+    <label>Project name</label>
+    <div uiInputContainer>
+      <i uiInputPrefix class="fa-solid fa-pencil"></i>
+      <input uiInput formControlName="name" lbbRandomName />
+    </div>
   </div>
-</div>
+  <div class="flex flex-col">
+    <label>Project code</label>
+    <div uiInputContainer>
+      <input uiInput formControlName="code" />
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <label>Project description</label>
+    <div uiInputContainer>
+      <textarea uiInput formControlName="description"></textarea>
+    </div>
+  </div>
+</form>

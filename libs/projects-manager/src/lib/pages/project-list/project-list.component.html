@@ -1,11 +1,23 @@
-
-<h2 class="projects-list__header">Projects list</h2>
+<div class="projects-list__header">
+  <h2>
+    Projects list
+  </h2>
+  <div class="projects-list__actios">
+    <a [routerLink]="['..','create']" uiButton>
+      <i class="fa-solid fa-circle-plus"></i>
+      Create new project
+    </a>
+  </div>
+</div>
 
 <div class="projects-list__grid">
-  @for(p of ['LBB']; track p) {
+  @for (p of ['LBB']; track p) {
     <ui-card>
       <div class="project-card__info">
-        <div class="flex justify-center align-middle flex-col items-center text-white rounded-full bg-blue-600 w-16 h-16">LBB</div>
+        <div
+          class="flex justify-center align-middle flex-col items-center text-white rounded-full bg-blue-600 w-16 h-16">
+          LBB
+        </div>
         <h3>Let's be busy</h3>
         <small class="text-gray-400">Simple project manager</small>
       </div>
