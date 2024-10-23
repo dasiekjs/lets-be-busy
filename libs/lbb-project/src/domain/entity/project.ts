@@ -1,6 +1,6 @@
 import {ProjectId} from "../value-object/project-id";
 
-class Project {
+export class Project {
 
   constructor(
     public readonly id: ProjectId,
