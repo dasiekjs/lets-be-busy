@@ -6,6 +6,7 @@ export * from './domain/value-object/issue-type'
 export * from './domain/entity/issue';
 export * from './domain/entity/project';
 export * from './domain/entity/user';
+export * from './domain/entity/comment';
 
 export * from './domain/repository/issue.repository'
 

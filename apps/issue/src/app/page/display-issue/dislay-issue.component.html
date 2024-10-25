@@ -15,7 +15,7 @@
   <h1 class="text-3xl text-gray-800 py-3">Let's be busy development</h1>
 </div>
 <div class="flex flex-row">
-  <div class="w-2/3">
+  <div class="w-2/3 pr-3">
     <div class="grid grid-cols-2 text-gray-500 py-2">
       <div class="flex flex-row gap-1 items-center">
         <i class="fa-solid fa-minus text-white bg-yellow-500 p-1 rounded"></i>
@@ -35,21 +35,25 @@
       consectetur
       adipiscing elit. Sed ut lacus eu urna dapibus aliquam. Integer dignissim pellentesque nulla a pellentesque.
     </div>
-    <hr class="my-3"/>
+    <hr class="my-3" />
     <div>
-      <div class="flex flex-col">
-        <div class="flex gap-3 items-center">
-          <img src="https://avatars.githubusercontent.com/u/22263436?v=4"
-               class="object-cover w-8 h-8 rounded-full
+      <div class="flex flex-col gap-3">
+        @for (comment of comments; track comment.id) {
+          <div class="comment-container">
+            <div class="flex gap-2 items-center">
+              <img src="https://avatars.githubusercontent.com/u/22263436?v=4"
+                   class="object-cover w-8 h-8 rounded-full
                             border-2 border-emerald-400  shadow-emerald-400
-                            "/>
-          <h3 class="font-bold">
-            User name
-          </h3>
-        </div>
-        <p class="text-gray-600 mt-2">
-          this is sample commnent
-        </p>
+                            " />
+              <h3 class="font-bold">
+                {{comment.author.name}}
+              </h3>
+            </div>
+            <p class="text-gray-600 mt-2">
+              {{comment.content}}
+            </p>
+          </div>
+        }
       </div>
     </div>
   </div>

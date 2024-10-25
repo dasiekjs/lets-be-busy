@@ -1,10 +1,9 @@
-import {Issue, IssueId, ProjectId} from '@lets-be-busy/lbb-project';
+import {Issue, ProjectId} from '@lets-be-busy/lbb-project';
 import {patchState, signalStore, withHooks, withMethods, withState} from '@ngrx/signals';
 
 import {inject} from '@angular/core';
 import {LbbIssueRepository} from '@lets-be-busy/lbb-project';
 import {firstValueFrom, isObservable, Observable} from "rxjs";
-import {addEntities, SelectEntityId, withEntities} from "@ngrx/signals/entities";
 
 const intoPromise = <T>(_input: T | Promise<T> | Observable<T>): Promise<T> => {
   if (_input instanceof Promise) {
@@ -29,6 +28,9 @@ const initialState: IssueListState = {
 }
 
 export const IssueListStore = signalStore(
+  {
+    providedIn: 'root'
+  },
   withState(initialState),
   withMethods((store, issueRepository = inject(LbbIssueRepository)) => ({
       async loadData(filters: { projectId: ProjectId }): Promise<void> {

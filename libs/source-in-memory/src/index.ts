@@ -5,7 +5,7 @@ export const InMemoryRepositories = {
   issueRepository : {
     provide: LbbIssueRepository,
     useFactory: () => {
-      return new InMemoryIssueRepository(1000, 3500);
+      return new InMemoryIssueRepository(500, 1500);
     }
   }
 }

@@ -6,8 +6,8 @@ import {delay, of} from "rxjs";
 export class InMemoryIssueRepository implements IssueRepository {
 
   constructor(
-    private readonly minQueryTime: number = 0,
-    private readonly maxQueryTime: number = 0
+    private readonly minQueryTime = 0,
+    private readonly maxQueryTime = 0
   ) {
   }
 
