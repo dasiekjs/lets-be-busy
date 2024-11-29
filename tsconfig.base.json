@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lets-be-busy/project-feature": ["libs/project-feature/src/index.ts"],
+      "@lets-be-busy/api-project": ["libs/api-project/src/index.ts"],
+      "@lets-be-busy/project-feature": ["libs/ngx-project/src/index.ts"],
+      "@lets-be-busy/project-manager": ["libs/project-manager/src/index.ts"],
       "@lets-be-busy/ui-elements": ["libs/ui-elements/src/index.ts"]
     }
   },

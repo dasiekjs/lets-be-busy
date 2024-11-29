@@ -2,7 +2,7 @@ export default {
   displayName: 'project-feature',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/libs/project-feature',
+  coverageDirectory: '../../coverage/libs/ngx-project',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
