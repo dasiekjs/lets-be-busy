@@ -15,10 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lets-be-busy/lbb-project": ["libs/lbb-project/src/index.ts"],
-      "@lets-be-busy/shared": ["libs/shared/src/index.ts"],
-      "@lets-be-busy/source-in-memory": ["libs/source-in-memory/src/index.ts"],
-      "issue/Routes": ["apps/issue/src/app/remote-entry/entry.routes.ts"]
+      "@lets-be-busy/project-feature": ["libs/project-feature/src/index.ts"],
+      "@lets-be-busy/ui-elements": ["libs/ui-elements/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
